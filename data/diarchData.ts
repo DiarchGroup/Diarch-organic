@@ -91,8 +91,7 @@ export const diarchData = {
       category: "Ground Powders",
       sizes: ["100g", "250g", "500g"],
       origin: "Rajasthan & Telangana Belts",
-      img: "/images/turmeric-powder.png",
-      hasMockup: false
+      img: "/images/turmeric-powder.png"
     },
     {
       id: 2,
@@ -102,8 +101,7 @@ export const diarchData = {
       category: "Ground Powders",
       sizes: ["100g", "250g", "500g"],
       origin: "Kerala Spice Estates",
-      img: "/images/black-pepper-powder.png",
-      hasMockup: false
+      img: "/images/black-pepper-powder.png"
     },
     {
       id: 3,
@@ -113,8 +111,7 @@ export const diarchData = {
       category: "Artisanal Blends",
       sizes: ["100g", "250g", "500g"],
       origin: "Subcontinental Heritage Blend",
-      img: "/images/chaat-masala-powder.png",
-      hasMockup: false
+      img: "/images/chaat-masala-powder.png"
     },
     {
       id: 4,
@@ -124,8 +121,7 @@ export const diarchData = {
       category: "Artisanal Blends",
       sizes: ["100g", "250g", "500g"],
       origin: "Traditional Organic Sourcing",
-      img: "/images/bihari-chicken-masala-powder.png",
-      hasMockup: false
+      img: "/images/bihari-chicken-masala-powder.png"
     },
     {
       id: 5,
@@ -135,8 +131,7 @@ export const diarchData = {
       category: "Ground Powders",
       sizes: ["100g", "250g", "500g"],
       origin: "Heritage Farming Belts",
-      img: "/images/coriander-powder.png",
-      hasMockup: false
+      img: "/images/coriander-powder.png"
     },
     {
       id: 6,
@@ -147,8 +142,7 @@ export const diarchData = {
       sizes: ["100g", "250g", "500g"],
       origin: "Bihar Champaran Heritage",
       img: "/images/champaran-meat-masala.png",
-      mockup: "/images/Mockup_-_Champaran_Meat_Masala_-_Pauch.png",
-      hasMockup: true
+      pouch: "/images/champaran-meat-masala-pouch.png"
     },
     {
       id: 7,
@@ -159,8 +153,7 @@ export const diarchData = {
       sizes: ["100g", "250g", "500g"],
       origin: "High-Heat Organic Farms",
       img: "/images/red-chilli-powder.png",
-      mockup: "/images/Mockup_-_Red_Chilli_Powder_-_Pauch.png",
-      hasMockup: true
+      pouch: "/images/red-chilli-pouch.png"
     },
     {
       id: 8,
@@ -171,8 +164,7 @@ export const diarchData = {
       sizes: ["100g", "250g", "500g"],
       origin: "Gourmet Kitchen Blend",
       img: "/images/sabji-masala.png",
-      mockup: "/images/Mockup_-_Sabji_Masala_-_Pauch.png",
-      hasMockup: true
+      pouch: "/images/sabji-masala-pouch.png"
     },
     {
       id: 9,
@@ -183,8 +175,7 @@ export const diarchData = {
       sizes: ["100g", "250g", "500g"],
       origin: "Desert Soil Sourced Cumin",
       img: "/images/cumin-powder.png",
-      mockup: "/images/Mockup_-_Cumin_Powder_-_Pauch.png",
-      hasMockup: true
+      pouch: "/images/cumin-powder-pouch.png"
     },
     {
       id: 10,
@@ -195,8 +186,7 @@ export const diarchData = {
       sizes: ["50g", "100g", "250g"],
       origin: "Imperial Pantry Standard",
       img: "/images/garam-masala-powder.png",
-      mockup: "/images/Mockup_-_Garam_Masala_-_Pauch.png",
-      hasMockup: true
+      pouch: "/images/garam-masala-pouch.png"
     }
   ],
   contact: {
