@@ -23,7 +23,7 @@ const stagger = {
 // The hero photo, used both as the section background and as the fill of the
 // knockout title. `backgroundAttachment: fixed` pins both to the viewport, so the
 // image inside the letters lines up pixel-for-pixel with the image behind them.
-const HERO_IMG = '/images/hero-spices.jpg';
+const HERO_IMG = '/images/hero-spices-premium.png';
 const heroBg = {
   backgroundImage: `url(${HERO_IMG})`,
   backgroundSize: 'cover',
