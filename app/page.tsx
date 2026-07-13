@@ -5,7 +5,7 @@ import { useRef, useState } from 'react';
 import { diarchData } from '@/data/diarchData';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
-import { ArrowRight, ArrowDown, ArrowLeft, Target, Warehouse, Sprout, Globe, Flower, Calendar, Shield, Sparkles, ChefHat } from 'lucide-react';
+import { ArrowRight, ArrowDown, ArrowLeft, Target, Warehouse, Sprout, Globe, Flower, Calendar, Shield, Sparkles, ChefHat, Instagram, Facebook, Linkedin, Send } from 'lucide-react';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
@@ -543,38 +543,76 @@ export default function Home() {
         {/* ════════════════════════════════════════════
             6. FOOTER
         ════════════════════════════════════════════ */}
-        <footer className="text-[#c3ccb9] pt-24 pb-12 px-8 lg:px-16 border-t border-white/10 relative z-10">
-          <div className="max-w-[1600px] mx-auto">
+        <footer className="text-[#c3ccb9] pt-24 pb-12 px-8 lg:px-16 border-t border-white/5 bg-gradient-to-b from-[#05120e] to-[#0a221b] relative overflow-hidden z-10">
+          {/* Subtle Watermark */}
+          <div className="absolute right-0 bottom-0 pointer-events-none select-none overflow-hidden z-0">
+            <span className="font-serif text-[18vw] leading-[0.8] text-white/[0.015] translate-y-[15%] translate-x-[5%] inline-block uppercase font-semibold">
+              Diarch
+            </span>
+          </div>
+
+          <div className="max-w-[1600px] mx-auto relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+              {/* Brand Col */}
               <div className="lg:col-span-5 max-w-md">
-                <div className="font-serif text-3xl text-[#fff4df] mb-5">
+                <div className="font-serif text-3xl text-[#fff4df] mb-5 tracking-tight">
                   Diarch <span className="italic text-[#e5ad76]">Organic</span>
                 </div>
-                <p className="text-[#c3ccb9] text-sm leading-relaxed mb-4">
-                  Premium, hygienically processed, export-grade pantry essentials. Sourced from celebrated agricultural belts.
+                <p className="text-[#c3ccb9]/80 text-sm leading-relaxed mb-6 font-light">
+                  Premium, hygienically processed, export-grade pantry essentials. Sourced from celebrated agricultural belts of the Indian subcontinent.
                 </p>
-                <p className="text-[10px] text-[#e5ad76]/70 tracking-[0.2em] uppercase">
-                  A Division of the Diarch Group · Est. 2016
-                </p>
+                <div className="flex items-center gap-4 text-[#c3ccb9]/60">
+                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="h-8 w-8 rounded-full border border-white/10 flex items-center justify-center hover:text-[#e5ad76] hover:border-[#e5ad76] hover:scale-105 transition-all duration-300">
+                    <Instagram className="h-4 w-4" />
+                  </a>
+                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="h-8 w-8 rounded-full border border-white/10 flex items-center justify-center hover:text-[#e5ad76] hover:border-[#e5ad76] hover:scale-105 transition-all duration-300">
+                    <Facebook className="h-4 w-4" />
+                  </a>
+                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="h-8 w-8 rounded-full border border-white/10 flex items-center justify-center hover:text-[#e5ad76] hover:border-[#e5ad76] hover:scale-105 transition-all duration-300">
+                    <Linkedin className="h-4 w-4" />
+                  </a>
+                </div>
               </div>
-              <div className="lg:col-span-3">
+
+              {/* Navigate Col */}
+              <div className="lg:col-span-3 lg:col-start-7">
                 <h4 className="text-[10px] tracking-[0.25em] uppercase text-[#fff4df] font-bold mb-6">Navigate</h4>
-                <ul className="space-y-4 text-sm text-[#c3ccb9]">
-                  <li><Link href="/" className="hover:text-[#e5ad76] transition-colors">Home</Link></li>
-                  <li><Link href="/contact" className="hover:text-[#e5ad76] transition-colors">Inquire</Link></li>
+                <ul className="space-y-3.5 text-sm text-[#c3ccb9]/90 font-light">
+                  <li>
+                    <Link href="/" className="hover:text-[#e5ad76] transition-colors relative group py-1">
+                      Home
+                      <span className="absolute left-0 bottom-0 h-px w-0 bg-[#e5ad76] group-hover:w-full transition-all duration-300" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/contact" className="hover:text-[#e5ad76] transition-colors relative group py-1">
+                      Inquire
+                      <span className="absolute left-0 bottom-0 h-px w-0 bg-[#e5ad76] group-hover:w-full transition-all duration-300" />
+                    </Link>
+                  </li>
                 </ul>
               </div>
-              <div className="lg:col-span-4">
-                <h4 className="text-[10px] tracking-[0.25em] uppercase text-[#fff4df] font-bold mb-6">Contact</h4>
-                <div className="space-y-3 text-sm text-[#c3ccb9]">
-                  <p>{diarchData.contact.phone}</p>
-                  <p>{diarchData.contact.email}</p>
-                  <p className="text-xs leading-relaxed">{diarchData.contact.office}</p>
+
+              {/* Head Office Col */}
+              <div className="lg:col-span-3">
+                <h4 className="text-[10px] tracking-[0.25em] uppercase text-[#fff4df] font-bold mb-6">Head Office</h4>
+                <div className="space-y-3 text-xs text-[#c3ccb9]/80 font-light leading-relaxed">
+                  <p className="text-sm font-semibold text-white/95">{diarchData.brandInfo.website}</p>
+                  <p>{diarchData.contact.office}</p>
                 </div>
               </div>
             </div>
-            <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] text-[#c3ccb9]">
-              <span>© 2026 Diarch Organic. All Rights Reserved.</span>
+
+            {/* Bottom Bar */}
+            <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] text-[#c3ccb9]/50 tracking-[0.05em]">
+              <div className="flex flex-col gap-1 md:flex-row md:items-center md:gap-6">
+                <span>© 2026 Diarch Organic. All Rights Reserved.</span>
+                <span>A Division of the Diarch Group · Est. 2016</span>
+              </div>
+              <div className="flex items-center gap-6">
+                <span className="text-[9px] text-[#e5ad76]/50 tracking-[0.2em] uppercase">{diarchData.contact.phone}</span>
+                <span className="text-[9px] text-[#e5ad76]/50 tracking-[0.2em] uppercase">{diarchData.contact.email}</span>
+              </div>
             </div>
           </div>
         </footer>
