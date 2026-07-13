@@ -8,7 +8,7 @@ import { diarchData } from '@/data/diarchData';
 import { CircleCheck as CheckCircle2 } from 'lucide-react';
 
 // Full-bleed leaf photo pinned behind everything — mirrors the reference split screen.
-const BG_IMG = '/images/hero-cardamom-terraces.png';
+const BG_IMG = '/images/contact-bg-premium.png';
 const bgStyle = {
   backgroundImage: `url(${BG_IMG})`,
   backgroundSize: 'cover',
