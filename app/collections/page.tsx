@@ -133,8 +133,8 @@ export default function Collections() {
               </motion.article>
             ))}
 
-            {/* 10 Placeholder slots */}
-            {Array.from({ length: 10 }, (_, i) => (
+            {/* 6 Placeholder slots */}
+            {Array.from({ length: 6 }, (_, i) => (
               <motion.div
                 key={`placeholder-${i}`}
                 variants={fadeUp}

@@ -243,8 +243,8 @@ export default function Home() {
               </motion.article>
             ))}
 
-            {/* 10 Placeholder slots for future products */}
-            {Array.from({ length: 10 }, (_, i) => (
+            {/* 6 Placeholder slots for future products */}
+            {Array.from({ length: 6 }, (_, i) => (
               <motion.div
                 key={`placeholder-${i}`}
                 variants={scaleIn}

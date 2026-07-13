@@ -91,7 +91,8 @@ export const diarchData = {
       category: "Ground Powders",
       sizes: ["100g", "250g", "500g"],
       origin: "Rajasthan & Telangana Belts",
-      img: "/images/turmeric-powder.png"
+      img: "/images/turmeric-powder.png",
+      pouch: "/images/turmeric-pouch.png"
     },
     {
       id: 2,
@@ -187,6 +188,50 @@ export const diarchData = {
       origin: "Imperial Pantry Standard",
       img: "/images/garam-masala-powder.png",
       pouch: "/images/garam-masala-pouch.png"
+    },
+    {
+      id: 11,
+      tag: "Organic",
+      name: "Fox Nut Mint",
+      desc: "Gourmet, crunchy popped lotus seeds roasted with mint leaves and Himalayan rock salt.",
+      category: "Artisanal Blends",
+      sizes: ["50g", "100g"],
+      origin: "Mithila Region, Bihar",
+      img: "/images/foxnut-mint-pouch.jpg",
+      pouch: "/images/foxnut-mint-pouch.jpg"
+    },
+    {
+      id: 12,
+      tag: "Artisanal",
+      name: "Fox Nut Chocolate",
+      desc: "Crunchy puffed fox nuts coated in luxurious rich premium dark chocolate.",
+      category: "Artisanal Blends",
+      sizes: ["50g", "100g"],
+      origin: "Mithila Region, Bihar",
+      img: "/images/foxnut-chocolate-pouch.png",
+      pouch: "/images/foxnut-chocolate-pouch.png"
+    },
+    {
+      id: 13,
+      tag: "Artisanal",
+      name: "Fox Nut Peri Peri",
+      desc: "Zesty and spicy popped water lily seeds dusted with a premium African peri peri spice blend.",
+      category: "Artisanal Blends",
+      sizes: ["50g", "100g"],
+      origin: "Mithila Region, Bihar",
+      img: "/images/foxnut-periperi-pouch.jpg",
+      pouch: "/images/foxnut-periperi-pouch.jpg"
+    },
+    {
+      id: 14,
+      tag: "Organic",
+      name: "Fox Nut Classic",
+      desc: "Lightly toasted gourmet fox nuts flavored with premium organic cow ghee and single-origin black pepper.",
+      category: "Artisanal Blends",
+      sizes: ["50g", "100g"],
+      origin: "Mithila Region, Bihar",
+      img: "/images/foxnut-classic-pouch.png",
+      pouch: "/images/foxnut-classic-pouch.png"
     }
   ],
   contact: {
