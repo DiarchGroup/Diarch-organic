@@ -1,16 +1,18 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Plus_Jakarta_Sans, Cormorant_Garamond } from 'next/font/google';
 
-const inter = Inter({ 
+const plusJakartaSans = Plus_Jakarta_Sans({ 
   subsets: ['latin'], 
   variable: '--font-sans',
   display: 'swap',
 });
 
-const playfair = Playfair_Display({ 
+const cormorantGaramond = Cormorant_Garamond({ 
   subsets: ['latin'], 
   variable: '--font-serif',
+  weight: ['300', '400', '500', '600', '700'],
+  style: ['normal', 'italic'],
   display: 'swap',
 });
 
@@ -25,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${plusJakartaSans.variable} ${cormorantGaramond.variable}`}>
       <body>{children}</body>
     </html>
   );

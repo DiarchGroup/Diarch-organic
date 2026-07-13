@@ -1,7 +1,7 @@
 export const diarchData = {
   brandInfo: {
     name: "Diarch Organic",
-    tagline: "Roots of India · Reach of the World",
+    tagline: "Premium Indian Pantry",
     website: "www.diarchinternational.com",
     since: "2016",
     quote: "For the modern Indian household and the global Indian diaspora who refuse to compromise on quality, Diarch Organic delivers premium, hygienically processed, export-grade pantry essentials — wrapped in packaging worthy of the world's finest gourmet shelves."
@@ -30,7 +30,7 @@ export const diarchData = {
     designation: "Founder & Managing Director, Diarch Group",
     subheading: "A Vision Rooted in Purpose, Growing Towards the World",
     paragraphs: [
-      "Having built a strong foundation in real estate, I have always believed that true success lies not in one achievement, but in the ability to create lasting value across communities. It is this conviction that inspired me to diversify the Diarch Group beyond its origins — and to channel our resources, expertise, and networks into something deeply personal: bringing the finest of India's organic produce to doorsteps around the world.",
+      "Having built a strong foundation in real estate, I have always believed that true success lies not in one achievement, but in the ability to create lasting value across communities. It is this conviction that inspired me to diversify the Diarch Group beyond its origins, channeling our resources, expertise, and networks into something deeply personal: bringing the finest of India's organic produce to doorsteps around the world.",
       "India's soil is among the most generous on earth. Yet for decades, its finest ingredients — hand-harvested turmeric, heritage aromatic rice, and prized makhana — have reached global markets without the quality standards, traceability, or presentation they rightfully deserve. Diarch Organic was founded to change that narrative.",
       "Our commitment is fourfold. Through Diarch Organic, we source and deliver premium, ethically grown products directly to consumers — at pricing that reflects fairness to both the farmer and the family. Through Diarch Go, our e-commerce and supply chain division, we are building the digital infrastructure to make quality accessible at scale across domestic markets. And through Diarch International, our export-import arm, we are proudly carrying India's agricultural heritage to global markets — while simultaneously sourcing world-class products to serve our own country's growing aspirations.",
       "Equally close to our heart is our commitment to employment and community upliftment. The Diarch Group firmly believes that a business which does not empower the people around it is an incomplete business. As we scale our organic, logistics, and international trade operations, we are creating meaningful livelihoods — for farmers in the fields of Bihar and Telangana, for skilled workers in our processing and packaging facilities, for young professionals in our supply chain and e-commerce divisions, and for entrepreneurs and distributors in the markets we serve. Every unit of growth within the Diarch Group is designed to translate into an opportunity for someone whose life we can positively touch."

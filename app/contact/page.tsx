@@ -3,13 +3,17 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '@/components/Navbar';
+import Link from 'next/link';
 import { diarchData } from '@/data/diarchData';
-import { Mail, Phone, MapPin, Send, CircleCheck as CheckCircle2 } from 'lucide-react';
+import { CircleCheck as CheckCircle2 } from 'lucide-react';
 
-const fadeIn = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' } },
-};
+// Full-bleed leaf photo pinned behind everything — mirrors the reference split screen.
+const BG_IMG = '/images/hero-cardamom-terraces.png';
+const bgStyle = {
+  backgroundImage: `url(${BG_IMG})`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+} as const;
 
 export default function Contact() {
   const [formState, setFormState] = useState({
@@ -18,6 +22,7 @@ export default function Contact() {
     subject: '',
     message: '',
   });
+  const [subscribe, setSubscribe] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -36,152 +41,110 @@ export default function Contact() {
     setFormState(prev => ({ ...prev, [name]: value }));
   };
 
+  const labelClass = 'block text-sm font-bold text-white mb-2';
+  const fieldClass =
+    'w-full bg-transparent border-b border-white/25 pb-2 text-sm text-white placeholder:text-white/40 outline-none focus:border-white transition-colors';
+
   return (
-    <div className="min-h-screen bg-[#FAF9F5] text-stone-900 flex flex-col">
-      <Navbar />
+    <main className="relative min-h-screen overflow-hidden bg-[#1a2621] text-white font-sans antialiased">
+      <Navbar transparent />
 
-      <section className="pt-32 pb-16 bg-gradient-to-b from-emerald-950/5 to-transparent">
-        <div className="max-w-[1600px] mx-auto px-8 lg:px-16 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <span className="text-[11px] tracking-[0.25em] uppercase text-emerald-800 font-bold mb-4 block">
-              Connect With Us
-            </span>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif text-stone-900 leading-tight">
-              Get in Touch
-            </h1>
-            <p className="mt-4 text-base md:text-lg text-stone-500 max-w-2xl mx-auto leading-relaxed">
-              Wholesale inquiries, partnership opportunities, or questions about our heritage products.
-            </p>
-          </motion.div>
+      {/* Full-bleed photo + dark scrim */}
+      <div className="absolute inset-0 z-0" style={bgStyle} aria-hidden />
+      <div className="absolute inset-0 z-[1] bg-[#161f1a]/75" />
+      {/* Right-side darker glass panel (desktop) */}
+      <div className="absolute inset-y-0 right-0 z-[2] hidden w-1/2 bg-[#131b16]/80 backdrop-blur-md md:block" />
+
+      {/* Split grid */}
+      <div className="relative z-10 grid min-h-screen md:grid-cols-2">
+        {/* Left — imagery only (visible through the scrim), with a corner tagline */}
+        <div className="hidden md:flex flex-col justify-end p-12 lg:p-16">
+          <span className="text-[11px] tracking-[0.35em] uppercase text-emerald-300/80 font-bold">
+            Diarch Organic
+          </span>
         </div>
-      </section>
 
-      <section className="pb-24 lg:pb-32 flex-grow">
-        <div className="max-w-[1600px] mx-auto px-8 lg:px-16 grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        {/* Right — form */}
+        <div className="flex items-center justify-center px-7 py-28 sm:px-12 md:py-24 lg:px-20">
           <motion.div
-            variants={fadeIn}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="lg:col-span-5 bg-emerald-950 text-stone-200 p-10 lg:p-14 rounded-3xl flex flex-col gap-10"
-          >
-            <div>
-              <h2 className="text-3xl md:text-4xl font-serif text-white mb-4">Contact</h2>
-              <p className="text-emerald-300 text-sm leading-relaxed">
-                Reach out for wholesale inquiries, partnerships, or to learn more about our heritage.
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-6">
-              <div className="flex items-start gap-4">
-                <div className="h-10 w-10 shrink-0 bg-emerald-900 rounded-full flex items-center justify-center text-emerald-400">
-                  <MapPin className="h-5 w-5" />
-                </div>
-                <div>
-                  <h3 className="font-serif text-lg text-white">Office</h3>
-                  <p className="text-emerald-300/80 text-sm mt-1">{diarchData.contact.office}</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="h-10 w-10 shrink-0 bg-emerald-900 rounded-full flex items-center justify-center text-emerald-400">
-                  <Mail className="h-5 w-5" />
-                </div>
-                <div>
-                  <h3 className="font-serif text-lg text-white">Email</h3>
-                  <p className="text-emerald-300/80 text-sm mt-1">{diarchData.contact.email}</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="h-10 w-10 shrink-0 bg-emerald-900 rounded-full flex items-center justify-center text-emerald-400">
-                  <Phone className="h-5 w-5" />
-                </div>
-                <div>
-                  <h3 className="font-serif text-lg text-white">Phone</h3>
-                  <p className="text-emerald-300/80 text-sm mt-1">{diarchData.contact.phone}</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          <motion.div
-            variants={fadeIn}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="lg:col-span-7 bg-white p-10 lg:p-14 rounded-3xl border border-stone-200/60 shadow-sm relative overflow-hidden"
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            className="w-full max-w-md"
           >
             {isSubmitted ? (
-              <div className="py-16 text-center flex flex-col items-center justify-center">
-                <div className="h-16 w-16 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mb-6">
-                  <CheckCircle2 className="h-10 w-10" />
+              <div className="text-center flex flex-col items-center">
+                <div className="h-16 w-16 bg-emerald-500/15 text-emerald-300 rounded-full flex items-center justify-center mb-6">
+                  <CheckCircle2 className="h-9 w-9" />
                 </div>
-                <h2 className="text-3xl font-serif text-stone-900">Message Received</h2>
-                <p className="text-stone-500 mt-3 max-w-md leading-relaxed">
+                <h1 className="font-serif text-4xl text-white">Message received</h1>
+                <p className="mt-3 text-white/60 leading-relaxed">
                   Thank you for reaching out. We will respond within 24 hours.
                 </p>
                 <button
                   onClick={() => setIsSubmitted(false)}
-                  className="mt-8 bg-emerald-800 text-white px-8 py-3 text-xs tracking-[0.2em] uppercase font-semibold hover:bg-stone-900 transition-colors"
+                  className="mt-8 w-full bg-black text-white py-4 rounded-lg font-semibold hover:bg-white hover:text-black transition-colors"
                 >
-                  Send Another Message
+                  Send another message
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="flex flex-col gap-6">
-                <div>
-                  <h2 className="text-2xl font-serif text-stone-900 mb-2">Send a Message</h2>
-                  <p className="text-stone-500 text-sm">
-                    Fill in your details and we will respond shortly.
-                  </p>
+              <>
+                <div className="text-center mb-10">
+                  <h1 className="font-serif text-4xl md:text-5xl font-bold text-white">Get in touch</h1>
+                  <p className="mt-3 text-white/55">Please share your details.</p>
                 </div>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="flex flex-col gap-2">
-                    <label className="text-xs uppercase tracking-[0.1em] font-semibold text-stone-500">Name</label>
+
+                <form onSubmit={handleSubmit} className="flex flex-col gap-7">
+                  <div>
+                    <label className={labelClass}>Name</label>
                     <input type="text" name="name" required value={formState.name} onChange={handleInputChange}
-                      className="bg-stone-50 border border-stone-200 px-4 py-3 text-sm rounded-lg outline-none focus:border-emerald-700 focus:bg-white transition-all"
-                      placeholder="Your name" />
+                      className={fieldClass} placeholder="Enter your name" />
                   </div>
-                  <div className="flex flex-col gap-2">
-                    <label className="text-xs uppercase tracking-[0.1em] font-semibold text-stone-500">Email</label>
+                  <div>
+                    <label className={labelClass}>E-mail</label>
                     <input type="email" name="email" required value={formState.email} onChange={handleInputChange}
-                      className="bg-stone-50 border border-stone-200 px-4 py-3 text-sm rounded-lg outline-none focus:border-emerald-700 focus:bg-white transition-all"
-                      placeholder="your@email.com" />
+                      className={fieldClass} placeholder="Enter your e-mail" />
                   </div>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs uppercase tracking-[0.1em] font-semibold text-stone-500">Subject</label>
-                  <input type="text" name="subject" required value={formState.subject} onChange={handleInputChange}
-                    className="bg-stone-50 border border-stone-200 px-4 py-3 text-sm rounded-lg outline-none focus:border-emerald-700 focus:bg-white transition-all"
-                    placeholder="Inquiry type" />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs uppercase tracking-[0.1em] font-semibold text-stone-500">Message</label>
-                  <textarea name="message" required rows={5} value={formState.message} onChange={handleInputChange}
-                    className="bg-stone-50 border border-stone-200 px-4 py-3 text-sm rounded-lg outline-none focus:border-emerald-700 focus:bg-white transition-all resize-none"
-                    placeholder="How can we help..." />
-                </div>
-                <button type="submit" disabled={isSubmitting}
-                  className="bg-stone-900 text-white px-8 py-4 text-xs tracking-[0.2em] uppercase font-semibold hover:bg-emerald-800 transition-colors flex items-center justify-center gap-2 mt-2 disabled:opacity-75">
-                  {isSubmitting ? 'Sending...' : <><span>Submit Message</span><Send className="h-4 w-4" /></>}
-                </button>
-              </form>
+                  <div>
+                    <label className={labelClass}>Subject</label>
+                    <input type="text" name="subject" required value={formState.subject} onChange={handleInputChange}
+                      className={fieldClass} placeholder="Inquiry type" />
+                  </div>
+                  <div>
+                    <label className={labelClass}>Message</label>
+                    <textarea name="message" required rows={3} value={formState.message} onChange={handleInputChange}
+                      className={`${fieldClass} resize-none`} placeholder="How can we help..." />
+                  </div>
+
+                  <div className="flex items-center justify-between text-sm">
+                    <label className="flex items-center gap-2.5 text-white/70 cursor-pointer select-none">
+                      <input type="checkbox" checked={subscribe} onChange={(e) => setSubscribe(e.target.checked)}
+                        className="h-4 w-4 rounded border-white/30 bg-transparent accent-emerald-500" />
+                      Keep me updated
+                    </label>
+                    <a href={`mailto:${diarchData.contact.email}`} className="font-bold text-white hover:text-emerald-300 transition-colors">
+                      Prefer email?
+                    </a>
+                  </div>
+
+                  <button type="submit" disabled={isSubmitting}
+                    className="w-full bg-black text-white py-4 rounded-lg font-semibold hover:bg-white hover:text-black transition-colors disabled:opacity-70">
+                    {isSubmitting ? 'Sending...' : 'Send inquiry'}
+                  </button>
+                </form>
+
+                <p className="mt-8 text-center text-sm text-white/55">
+                  Looking for our range?{' '}
+                  <Link href="/collections" className="font-bold text-white hover:text-emerald-300 transition-colors">
+                    Browse collections
+                  </Link>
+                </p>
+              </>
             )}
           </motion.div>
         </div>
-      </section>
-
-      <footer className="bg-stone-950 text-stone-400 pt-16 pb-8 px-8 border-t border-stone-800">
-        <div className="max-w-[1600px] mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] tracking-wider uppercase">
-          <span className="font-serif text-white text-lg not-italic tracking-normal normal-case">
-            Diarch <span className="italic text-emerald-500">Organic</span>
-          </span>
-          <span>© 2026 Diarch Organic. All Rights Reserved.</span>
-        </div>
-      </footer>
-    </div>
+      </div>
+    </main>
   );
 }
