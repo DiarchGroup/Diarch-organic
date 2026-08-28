@@ -2,8 +2,8 @@ export const diarchData = {
   brandInfo: {
     name: "Diarch Organic",
     tagline: "Premium Indian Pantry",
-    website: "www.diarchinternational.com",
-    since: "2016",
+    website: "www.diarchorganic.com",
+    since: "2014",
     quote: "For the modern Indian household and the global Indian diaspora who refuse to compromise on quality, Diarch Organic delivers premium, hygienically processed, export-grade pantry essentials — wrapped in packaging worthy of the world's finest gourmet shelves."
   },
   introduction: {
@@ -85,6 +85,7 @@ export const diarchData = {
   products: [
     {
       id: 1,
+      slug: "turmeric-powder",
       tag: "Organic",
       name: "Turmeric Powder",
       desc: "Heritage turmeric sourced from selective belts, processed in hygienic factory conditions with high curcumin content.",
@@ -96,6 +97,7 @@ export const diarchData = {
     },
     {
       id: 2,
+      slug: "black-pepper-powder",
       tag: "Organic",
       name: "Black Pepper Powder",
       desc: "Bold, export-grade Tellicherry peppercorns ground at low speed to retain natural complex oils.",
@@ -106,6 +108,7 @@ export const diarchData = {
     },
     {
       id: 3,
+      slug: "chaat-masala-powder",
       tag: "Artisanal",
       name: "Chaat Masala Powder",
       desc: "A tangy, aromatic gourmet blend formulated to deliver immediate street-style complexity and rich authenticity.",
@@ -116,6 +119,7 @@ export const diarchData = {
     },
     {
       id: 4,
+      slug: "bihari-chicken-masala-powder",
       tag: "Artisanal",
       name: "Bihari Chicken Masala Powder",
       desc: "A robust regional recipe reflecting Bihar's agrarian heritage, crafted for rich, deep-toned chicken gravy.",
@@ -126,6 +130,7 @@ export const diarchData = {
     },
     {
       id: 5,
+      slug: "coriander-powder",
       tag: "Organic",
       name: "Coriander Powder",
       desc: "Sun-dried coriander seeds stone-ground carefully, releasing warm, sweet citrus notes to command your kitchen.",
@@ -136,6 +141,7 @@ export const diarchData = {
     },
     {
       id: 6,
+      slug: "champaran-meat-masala",
       tag: "Artisanal",
       name: "Champaran Meat Masala Powder",
       desc: "A specialized local spice mixture from Bihar, hand-formulated to create the iconic slow-cooked handi meat.",
@@ -147,6 +153,7 @@ export const diarchData = {
     },
     {
       id: 7,
+      slug: "red-chilli-powder",
       tag: "Organic",
       name: "Red Chilli Powder",
       desc: "Premium selection of sun-dried red chillies, stone-ground to preserve deep color, smoky aroma, and intense heat.",
@@ -158,6 +165,7 @@ export const diarchData = {
     },
     {
       id: 8,
+      slug: "sabji-masala-powder",
       tag: "Artisanal",
       name: "Sabji Masala Powder",
       desc: "A versatile daily seasoning spice blend that enhances ordinary vegetable stir-fries with rich subcontinental flavor.",
@@ -169,6 +177,7 @@ export const diarchData = {
     },
     {
       id: 9,
+      slug: "cumin-powder",
       tag: "Organic",
       name: "Cumin Powder",
       desc: "Earth-shaking aroma and warm complexity ground from premium dry-roasted heritage cumin seeds.",
@@ -180,6 +189,7 @@ export const diarchData = {
     },
     {
       id: 10,
+      slug: "garam-masala-powder",
       tag: "Artisanal",
       name: "Garam Masala Powder",
       desc: "The ultimate finishing spice. A luxury edit of cardamoms, cloves, mace, and cinnamon ground in perfect balance.",
@@ -191,6 +201,7 @@ export const diarchData = {
     },
     {
       id: 11,
+      slug: "fox-nut-mint",
       tag: "Organic",
       name: "Fox Nut Mint",
       desc: "Gourmet, crunchy popped lotus seeds roasted with mint leaves and Himalayan rock salt.",
@@ -202,6 +213,7 @@ export const diarchData = {
     },
     {
       id: 12,
+      slug: "fox-nut-chocolate",
       tag: "Artisanal",
       name: "Fox Nut Chocolate",
       desc: "Crunchy puffed fox nuts coated in luxurious rich premium dark chocolate.",
@@ -213,6 +225,7 @@ export const diarchData = {
     },
     {
       id: 13,
+      slug: "fox-nut-peri-peri",
       tag: "Artisanal",
       name: "Fox Nut Peri Peri",
       desc: "Zesty and spicy popped water lily seeds dusted with a premium African peri peri spice blend.",
@@ -224,6 +237,7 @@ export const diarchData = {
     },
     {
       id: 14,
+      slug: "fox-nut-classic",
       tag: "Organic",
       name: "Fox Nut Classic",
       desc: "Lightly toasted gourmet fox nuts flavored with premium organic cow ghee and single-origin black pepper.",
@@ -236,8 +250,8 @@ export const diarchData = {
   ],
   contact: {
     phone: "+91 92292 66955",
-    email: "info@diarchinternational.com",
-    website: "www.diarchinternational.com",
+    email: "info@diarchorganic.com",
+    website: "www.diarchorganic.com",
     office: "Diarch Group, Plot No 12 Community Center, Okhla Phase One - 110020"
   }
 };
