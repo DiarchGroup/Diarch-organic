@@ -339,6 +339,74 @@ h1, h2, h3, h4, .font-serif {
   box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.3);
 }
 
+.organic-grid-card-feature {
+  min-height: 360px;
+  align-items: stretch;
+  overflow: hidden;
+  padding: 2rem;
+  text-align: left;
+}
+
+.organic-grid-card-feature::before {
+  position: absolute;
+  inset: 0;
+  content: '';
+  background: radial-gradient(circle at 92% 12%, rgba(255, 244, 223, 0.16), transparent 8rem);
+  pointer-events: none;
+}
+
+.organic-grid-card-feature::after {
+  position: absolute;
+  right: -1.4rem;
+  bottom: -3.8rem;
+  content: '';
+  width: 14rem;
+  height: 14rem;
+  border: 1px solid rgba(255, 244, 223, 0.14);
+  border-radius: 9999px;
+  box-shadow: 0 0 0 1.2rem rgba(255, 244, 223, 0.025), 0 0 0 2.4rem rgba(255, 244, 223, 0.018);
+  pointer-events: none;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s ease;
+}
+
+.organic-grid-card-feature:hover::after {
+  transform: translate(-0.5rem, -0.4rem) scale(1.04);
+}
+
+.organic-card-index {
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 244, 223, 0.7);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.organic-card-index span {
+  margin: 0 0.35rem;
+  color: rgba(229, 173, 118, 0.7);
+}
+
+.organic-card-watermark {
+  position: absolute;
+  right: 1.2rem;
+  bottom: -0.3rem;
+  color: rgba(255, 244, 223, 0.055);
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 9rem;
+  font-weight: 600;
+  letter-spacing: -0.1em;
+  line-height: 0.75;
+  pointer-events: none;
+}
+
+.organic-grid-card-feature .organic-badge-disk {
+  align-self: flex-end;
+  margin-bottom: 0;
+}
+
 .organic-grid-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 30px 65px -15px rgba(0, 0, 0, 0.45);
@@ -421,4 +489,3 @@ h1, h2, h3, h4, .font-serif {
 .organic-grid-card:hover .organic-badge-hexagon {
   transform: scale(1.08) translateY(-2px);
 }
-

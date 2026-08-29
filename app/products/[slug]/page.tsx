@@ -61,13 +61,20 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
     description: product.desc,
     brand: { '@type': 'Brand', name: 'Diarch Organic' },
     category: product.category,
-    offers: {
-      '@type': 'Offer',
-      availability: 'https://schema.org/InStock',
-      priceCurrency: 'INR',
-      price: '0',
-      url: `${SITE_URL}/products/${product.slug}`,
-    },
+    additionalProperty: [
+      { '@type': 'PropertyValue', name: 'Origin', value: product.origin },
+      { '@type': 'PropertyValue', name: 'Available sizes', value: product.sizes.join(', ') },
+    ],
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+      { '@type': 'ListItem', position: 2, name: 'Products', item: `${SITE_URL}/products` },
+      { '@type': 'ListItem', position: 3, name: product.name, item: `${SITE_URL}/products/${product.slug}` },
+    ],
   };
 
   const related = diarchData.products
@@ -80,6 +87,10 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <section className="relative overflow-hidden pt-36 pb-24 md:pt-44 md:pb-32">

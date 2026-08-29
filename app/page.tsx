@@ -236,14 +236,20 @@ export default function Home() {
           <motion.div variants={fadeUp} custom={3} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 z-10 relative">
             
             {/* Card 1: Sage Green (Text) */}
-            <article className="organic-grid-card card-sage-green justify-center">
-              <div className="organic-badge-disk bg-[#1c2b23] text-[#e5ad76] border border-white/5">
+            <article className="organic-grid-card organic-grid-card-feature card-sage-green group">
+              <span className="organic-card-index">01 <span aria-hidden="true">/</span> ORIGIN</span>
+              <span className="organic-card-watermark" aria-hidden="true">01</span>
+              <div className="organic-badge-disk bg-[#1c2b23] text-[#e5ad76] border border-white/10">
                 <Flower className="w-6 h-6 text-white" />
               </div>
-              <h4 className="font-serif text-2xl text-[#fff4df] mb-4">Mithila Fox Nuts</h4>
-              <p className="text-sm leading-relaxed text-[#c3ccb9] font-light">
-                Grown in the historical wetlands of Bihar. Popped lotus seeds roasted with single-origin cow ghee and black pepper.
-              </p>
+              <div className="relative z-10 mt-auto max-w-[18rem]">
+                <h4 className="font-serif text-3xl leading-none text-[#fff4df] mb-4">Mithila Fox Nuts</h4>
+                <span className="mb-4 block h-px w-14 bg-[#e5ad76]/70" />
+                <p className="text-sm leading-relaxed text-[#c3ccb9] font-light">
+                  Grown in the historical wetlands of Bihar. Popped lotus seeds roasted with single-origin cow ghee and black pepper.
+                </p>
+              </div>
+              <span className="relative z-10 mt-6 text-[9px] font-semibold uppercase tracking-[0.25em] text-[#e5ad76]/80">Mithila wetlands · Bihar</span>
             </article>
 
             {/* Card 2: Photographic Card (Kerala Hills) */}
@@ -260,14 +266,20 @@ export default function Home() {
             </div>
 
             {/* Card 3: Terracotta Brown (Text) */}
-            <article className="organic-grid-card card-terracotta-brown justify-center">
-              <div className="organic-badge-disk bg-[#4f3022] text-[#e5ad76] border border-white/5">
+            <article className="organic-grid-card organic-grid-card-feature card-terracotta-brown group">
+              <span className="organic-card-index">03 <span aria-hidden="true">/</span> CRAFT</span>
+              <span className="organic-card-watermark" aria-hidden="true">03</span>
+              <div className="organic-badge-disk bg-[#4f3022] text-[#e5ad76] border border-white/10">
                 <ChefHat className="w-6 h-6 text-white" />
               </div>
-              <h4 className="font-serif text-2xl text-[#fff4df] mb-4">Champaran Blends</h4>
-              <p className="text-sm leading-relaxed text-[#c3ccb9] font-light">
-                Robust spice mixtures crafted to recreate the wood-fired clay handi slow-cooking traditions of northern India.
-              </p>
+              <div className="relative z-10 mt-auto max-w-[18rem]">
+                <h4 className="font-serif text-3xl leading-none text-[#fff4df] mb-4">Champaran Blends</h4>
+                <span className="mb-4 block h-px w-14 bg-[#e5ad76]/70" />
+                <p className="text-sm leading-relaxed text-[#c3ccb9] font-light">
+                  Robust spice mixtures crafted to recreate the wood-fired clay handi slow-cooking traditions of northern India.
+                </p>
+              </div>
+              <span className="relative z-10 mt-6 text-[9px] font-semibold uppercase tracking-[0.25em] text-[#f0c6a5]/80">Champaran · Bihar</span>
             </article>
 
             {/* Card 4: Photographic Card (Cardamom close-up) */}
@@ -375,6 +387,8 @@ export default function Home() {
                         src={prod.pouch || prod.img}
                         alt={`Diarch Organic ${prod.name}${prod.pouch ? ' pouch' : ''}`}
                         loading={isActive ? undefined : 'lazy'}
+                        width={380}
+                        height={285}
                         className="h-full w-full object-contain drop-shadow-xl"
                       />
                       <div className="absolute left-4 top-4 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.2em] text-[#fff4df] backdrop-blur-md">
