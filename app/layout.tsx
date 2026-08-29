@@ -21,7 +21,7 @@ const SITE_URL = 'https://www.diarchorganic.com';
 const SITE_TITLE = 'Diarch Organic | Premium Homegrown Indian Spices & Fox Nuts';
 const SITE_DESCRIPTION =
   'Export-grade homegrown Indian spices and Mithila fox nuts, from Patna to the world. Pure, hygienically processed pantry essentials from Diarch Organic.';
-const SOCIAL_IMAGE = `${SITE_URL}/images/champaran-meat-masala-pouch.png`;
+const SOCIAL_IMAGE = `${SITE_URL}/images/champaran-meat-masala-pouch.webp`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
