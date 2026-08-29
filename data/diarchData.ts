@@ -93,7 +93,7 @@ export const diarchData = {
       sizes: ["100g", "250g", "500g"],
       origin: "Rajasthan & Telangana Belts",
       img: "/images/turmeric-powder.png",
-      pouch: "/images/turmeric-pouch.png"
+      pouch: "/images/turmeric-pouch.webp"
     },
     {
       id: 2,
