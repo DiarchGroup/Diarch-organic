@@ -92,8 +92,8 @@ export const diarchData = {
       category: "Ground Powders",
       sizes: ["100g", "250g", "500g"],
       origin: "Rajasthan & Telangana Belts",
-      img: "/images/turmeric-powder.png",
-      pouch: "/images/turmeric-pouch.png"
+      img: "/images/turmeric-powder.webp",
+      pouch: "/images/turmeric-pouch.webp"
     },
     {
       id: 2,
@@ -104,7 +104,7 @@ export const diarchData = {
       category: "Ground Powders",
       sizes: ["100g", "250g", "500g"],
       origin: "Kerala Spice Estates",
-      img: "/images/black-pepper-powder.png"
+      img: "/images/black-pepper-powder.webp"
     },
     {
       id: 3,
@@ -115,7 +115,7 @@ export const diarchData = {
       category: "Artisanal Blends",
       sizes: ["100g", "250g", "500g"],
       origin: "Subcontinental Heritage Blend",
-      img: "/images/chaat-masala-powder.png"
+      img: "/images/chaat-masala-powder.webp"
     },
     {
       id: 4,
@@ -126,7 +126,7 @@ export const diarchData = {
       category: "Artisanal Blends",
       sizes: ["100g", "250g", "500g"],
       origin: "Traditional Organic Sourcing",
-      img: "/images/bihari-chicken-masala-powder.png"
+      img: "/images/bihari-chicken-masala-powder.webp"
     },
     {
       id: 5,
@@ -137,7 +137,7 @@ export const diarchData = {
       category: "Ground Powders",
       sizes: ["100g", "250g", "500g"],
       origin: "Heritage Farming Belts",
-      img: "/images/coriander-powder.png"
+      img: "/images/coriander-powder.webp"
     },
     {
       id: 6,
@@ -148,8 +148,8 @@ export const diarchData = {
       category: "Artisanal Blends",
       sizes: ["100g", "250g", "500g"],
       origin: "Bihar Champaran Heritage",
-      img: "/images/champaran-meat-masala.png",
-      pouch: "/images/champaran-meat-masala-pouch.png"
+      img: "/images/champaran-meat-masala.webp",
+      pouch: "/images/champaran-meat-masala-pouch.webp"
     },
     {
       id: 7,
@@ -160,8 +160,8 @@ export const diarchData = {
       category: "Ground Powders",
       sizes: ["100g", "250g", "500g"],
       origin: "High-Heat Organic Farms",
-      img: "/images/red-chilli-powder.png",
-      pouch: "/images/red-chilli-pouch.png"
+      img: "/images/red-chilli-powder.webp",
+      pouch: "/images/red-chilli-pouch.webp"
     },
     {
       id: 8,
@@ -172,8 +172,8 @@ export const diarchData = {
       category: "Artisanal Blends",
       sizes: ["100g", "250g", "500g"],
       origin: "Gourmet Kitchen Blend",
-      img: "/images/sabji-masala.png",
-      pouch: "/images/sabji-masala-pouch.png"
+      img: "/images/sabji-masala.webp",
+      pouch: "/images/sabji-masala-pouch.webp"
     },
     {
       id: 9,
@@ -184,8 +184,8 @@ export const diarchData = {
       category: "Ground Powders",
       sizes: ["100g", "250g", "500g"],
       origin: "Desert Soil Sourced Cumin",
-      img: "/images/cumin-powder.png",
-      pouch: "/images/cumin-powder-pouch.png"
+      img: "/images/cumin-powder.webp",
+      pouch: "/images/cumin-powder-pouch.webp"
     },
     {
       id: 10,
@@ -196,8 +196,8 @@ export const diarchData = {
       category: "Artisanal Blends",
       sizes: ["50g", "100g", "250g"],
       origin: "Imperial Pantry Standard",
-      img: "/images/garam-masala-powder.png",
-      pouch: "/images/garam-masala-pouch.png"
+      img: "/images/garam-masala-powder.webp",
+      pouch: "/images/garam-masala-pouch.webp"
     },
     {
       id: 11,
@@ -208,8 +208,8 @@ export const diarchData = {
       category: "Artisanal Blends",
       sizes: ["50g", "100g"],
       origin: "Mithila Region, Bihar",
-      img: "/images/foxnut-mint-pouch.jpg",
-      pouch: "/images/foxnut-mint-pouch.jpg"
+      img: "/images/foxnut-mint-pouch.webp",
+      pouch: "/images/foxnut-mint-pouch.webp"
     },
     {
       id: 12,
@@ -220,8 +220,8 @@ export const diarchData = {
       category: "Artisanal Blends",
       sizes: ["50g", "100g"],
       origin: "Mithila Region, Bihar",
-      img: "/images/foxnut-chocolate-pouch.png",
-      pouch: "/images/foxnut-chocolate-pouch.png"
+      img: "/images/foxnut-chocolate-pouch.webp",
+      pouch: "/images/foxnut-chocolate-pouch.webp"
     },
     {
       id: 13,
@@ -232,8 +232,8 @@ export const diarchData = {
       category: "Artisanal Blends",
       sizes: ["50g", "100g"],
       origin: "Mithila Region, Bihar",
-      img: "/images/foxnut-periperi-pouch.jpg",
-      pouch: "/images/foxnut-periperi-pouch.jpg"
+      img: "/images/foxnut-periperi-pouch.webp",
+      pouch: "/images/foxnut-periperi-pouch.webp"
     },
     {
       id: 14,
@@ -244,8 +244,8 @@ export const diarchData = {
       category: "Artisanal Blends",
       sizes: ["50g", "100g"],
       origin: "Mithila Region, Bihar",
-      img: "/images/foxnut-classic-pouch.png",
-      pouch: "/images/foxnut-classic-pouch.png"
+      img: "/images/foxnut-classic-pouch.webp",
+      pouch: "/images/foxnut-classic-pouch.webp"
     }
   ],
   contact: {

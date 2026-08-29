@@ -23,7 +23,7 @@ const stagger = {
 // The hero photo, used both as the section background and as the fill of the
 // knockout title. `backgroundAttachment: fixed` pins both to the viewport, so the
 // image inside the letters lines up pixel-for-pixel with the image behind them.
-const HERO_IMG = '/images/hero-spices-premium.png';
+const HERO_IMG = '/images/hero-spices-premium.webp';
 const heroBg = {
   backgroundImage: `url(${HERO_IMG})`,
   backgroundSize: 'cover',
@@ -248,7 +248,7 @@ export default function Home() {
 
             {/* Card 2: Photographic Card (Kerala Hills) */}
             <div className="overflow-hidden rounded-[2.2rem] relative h-[360px] md:h-auto shadow-2xl border border-white/10 group">
-              <img src="/images/spice-plantation-sunlight.png" alt="Kerala black pepper estates" loading="lazy" width={760} height={360} className="group-hover:scale-105 transition-transform duration-700 h-full w-full object-cover" />
+              <img src="/images/spice-plantation-sunlight.webp" alt="Kerala black pepper estates" loading="lazy" width={760} height={360} className="group-hover:scale-105 transition-transform duration-700 h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
               <div className="absolute bottom-8 left-8 right-8 z-10">
                 <span className="text-[9px] tracking-[0.3em] uppercase text-[#e5ad76] font-semibold block mb-2">Single Origin</span>
@@ -272,7 +272,7 @@ export default function Home() {
 
             {/* Card 4: Photographic Card (Cardamom close-up) */}
             <div className="overflow-hidden rounded-[2.2rem] relative h-[360px] md:h-auto shadow-2xl border border-white/10 group">
-              <img src="/images/p-cardamom.jpg" alt="Close-up cardamom pods" loading="lazy" width={760} height={360} className="group-hover:scale-105 transition-transform duration-700 h-full w-full object-cover" />
+              <img src="/images/p-cardamom.webp" alt="Close-up cardamom pods" loading="lazy" width={760} height={360} className="group-hover:scale-105 transition-transform duration-700 h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
               <div className="absolute bottom-8 left-8 right-8 z-10">
                 <span className="text-[9px] tracking-[0.3em] uppercase text-[#e5ad76] font-semibold block mb-2">Heritage Blend</span>
@@ -309,7 +309,7 @@ export default function Home() {
               
               {/* Floating pouch mockup asset */}
               <img
-                src="/images/champaran-meat-masala-pouch.png"
+                src="/images/champaran-meat-masala-pouch.webp"
                 alt="Diarch Organic Champaran Meat Masala Pouch"
                 loading="lazy"
                 width={176}
