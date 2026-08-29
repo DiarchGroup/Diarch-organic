@@ -5,7 +5,7 @@ import { useRef, useState } from 'react';
 import { diarchData } from '@/data/diarchData';
 import Navbar from '@/components/Navbar';
 import Link from 'next/link';
-import { ArrowRight, ArrowDown, ArrowLeft, Target, Warehouse, Sprout, Globe, Flower, Calendar, Shield, Sparkles, ChefHat, Instagram, Facebook, Linkedin, Send } from 'lucide-react';
+import { ArrowRight, ArrowDown, ArrowLeft, Target, Warehouse, Sprout, Globe, Flower, Calendar, Shield, Sparkles, ChefHat } from 'lucide-react';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 50 },
@@ -52,6 +52,10 @@ export default function Home() {
           1. SPLIT EDITORIAL HERO
       ════════════════════════════════════════════ */}
       <section ref={heroRef} className="relative h-screen min-h-[760px] overflow-hidden bg-stone-950">
+        {/* Single semantic, keyword-rich H1 for SEO — the "Diarch" / "Organic" pieces below are
+            purely decorative stacked text, rendered as spans so the page has exactly one H1. */}
+        <h1 className="sr-only">Diarch Organic — Premium Homegrown Indian Spices &amp; Fox Nuts</h1>
+
         {/* Full-bleed fixed background photo */}
         <div className="absolute inset-0 z-0" style={heroBg} aria-label="Diarch Organic Premium Spices" role="img" />
         <div className="absolute inset-0 z-[1] bg-gradient-to-b from-stone-950/40 via-transparent to-stone-950/60" />
@@ -72,9 +76,9 @@ export default function Home() {
           {/* Top/Middle Section: Mobile Titles */}
           <div className="flex-1 flex flex-col justify-center text-left">
             {/* Mobile Title — hidden on desktop */}
-            <motion.div variants={fadeUp} custom={1} className="md:hidden mb-8">
-              <h1 className={`${TITLE_CLASS} text-white`}>Diarch</h1>
-              <h1 className={`${TITLE_CLASS} italic font-normal text-white mt-3`}>Organic</h1>
+            <motion.div variants={fadeUp} custom={1} className="md:hidden mb-8" aria-hidden="true">
+              <span className={`${TITLE_CLASS} block text-white`}>Diarch</span>
+              <span className={`${TITLE_CLASS} block italic font-normal text-white mt-3`}>Organic</span>
             </motion.div>
           </div>
 
@@ -92,23 +96,25 @@ export default function Home() {
           </div>
 
           {/* Desktop "Diarch" — absolute positioned on the left side of the divider, close to center */}
-          <motion.h1
+          <motion.span
             variants={fadeUp}
             custom={1}
+            aria-hidden="true"
             style={{ ...heroBg, WebkitBackgroundClip: 'text', backgroundClip: 'text', WebkitTextFillColor: 'transparent', color: 'transparent' }}
             className={`${TITLE_CLASS} hidden md:block absolute right-[calc(50%+1rem)] top-[42%] -translate-y-1/2 text-right`}
           >
             Diarch
-          </motion.h1>
+          </motion.span>
 
           {/* Desktop "Organic" — absolute positioned on the right side of the divider, close to center */}
-          <motion.h1
+          <motion.span
             variants={fadeUp}
             custom={1}
+            aria-hidden="true"
             className={`${TITLE_CLASS} italic font-normal text-white absolute left-[calc(50%+1rem)] top-[54%] -translate-y-1/2 hidden md:block`}
           >
             Organic
-          </motion.h1>
+          </motion.span>
         </motion.div>
 
         {/* Right-side composition marker */}
@@ -242,7 +248,7 @@ export default function Home() {
 
             {/* Card 2: Photographic Card (Kerala Hills) */}
             <div className="overflow-hidden rounded-[2.2rem] relative h-[360px] md:h-auto shadow-2xl border border-white/10 group">
-              <img src="/images/spice-plantation-sunlight.png" alt="Kerala black pepper estates" className="group-hover:scale-105 transition-transform duration-700 h-full w-full object-cover" />
+              <img src="/images/spice-plantation-sunlight.png" alt="Kerala black pepper estates" loading="lazy" width={760} height={360} className="group-hover:scale-105 transition-transform duration-700 h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
               <div className="absolute bottom-8 left-8 right-8 z-10">
                 <span className="text-[9px] tracking-[0.3em] uppercase text-[#e5ad76] font-semibold block mb-2">Single Origin</span>
@@ -266,7 +272,7 @@ export default function Home() {
 
             {/* Card 4: Photographic Card (Cardamom close-up) */}
             <div className="overflow-hidden rounded-[2.2rem] relative h-[360px] md:h-auto shadow-2xl border border-white/10 group">
-              <img src="/images/p-cardamom.jpg" alt="Close-up cardamom pods" className="group-hover:scale-105 transition-transform duration-700 h-full w-full object-cover" />
+              <img src="/images/p-cardamom.jpg" alt="Close-up cardamom pods" loading="lazy" width={760} height={360} className="group-hover:scale-105 transition-transform duration-700 h-full w-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
               <div className="absolute bottom-8 left-8 right-8 z-10">
                 <span className="text-[9px] tracking-[0.3em] uppercase text-[#e5ad76] font-semibold block mb-2">Heritage Blend</span>
@@ -302,9 +308,12 @@ export default function Home() {
               </div>
               
               {/* Floating pouch mockup asset */}
-              <img 
-                src="/images/champaran-meat-masala-pouch.png" 
-                alt="Diarch Organic Champaran Meat Masala Pouch" 
+              <img
+                src="/images/champaran-meat-masala-pouch.png"
+                alt="Diarch Organic Champaran Meat Masala Pouch"
+                loading="lazy"
+                width={176}
+                height={176}
                 className="absolute -right-8 -bottom-4 w-44 drop-shadow-[0_15px_22px_rgba(12,33,27,0.35)] transform rotate-6 group-hover:rotate-12 group-hover:translate-y-[-4px] group-hover:scale-102 transition-all duration-700 pointer-events-none z-10"
               />
             </article>
@@ -364,7 +373,8 @@ export default function Home() {
                     <div className="relative flex aspect-[4/3] items-center justify-center overflow-hidden border-b border-white/10 bg-white/5 p-6 lg:p-8">
                       <img
                         src={prod.pouch || prod.img}
-                        alt={prod.name}
+                        alt={`Diarch Organic ${prod.name}${prod.pouch ? ' pouch' : ''}`}
+                        loading={isActive ? undefined : 'lazy'}
                         className="h-full w-full object-contain drop-shadow-xl"
                       />
                       <div className="absolute left-4 top-4 rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-[9px] font-bold uppercase tracking-[0.2em] text-[#fff4df] backdrop-blur-md">
@@ -384,6 +394,15 @@ export default function Home() {
                       <p className="mt-4 text-[10px] font-semibold uppercase tracking-wider text-[#e5ad76]/80">
                         {prod.sizes.join(' · ')}
                       </p>
+                      {isActive && prod.slug && (
+                        <Link
+                          href={`/products/${prod.slug}`}
+                          className="mt-5 inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-[#e5ad76] hover:text-white transition-colors"
+                        >
+                          View product
+                          <ArrowRight className="h-3.5 w-3.5" />
+                        </Link>
+                      )}
                     </div>
                   </motion.article>
                 );
@@ -515,9 +534,12 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row lg:flex-col gap-6 sm:items-center lg:items-start">
                   {/* CEO Portrait */}
                   <motion.div variants={fadeUp} custom={2} className="relative w-48 h-60 overflow-hidden rounded-2xl border border-white/10 shadow-lg">
-                    <img 
-                      src="/images/ranjan-kumar.webp" 
-                      alt="Ranjan Kumar Ojha, CEO Diarch Group" 
+                    <img
+                      src="/images/ranjan-kumar.webp"
+                      alt="Ranjan Kumar Ojha, Founder & Managing Director, Diarch Group"
+                      loading="lazy"
+                      width={192}
+                      height={240}
                       className="w-full h-full object-cover"
                     />
                   </motion.div>
@@ -561,17 +583,6 @@ export default function Home() {
                 <p className="text-[#c3ccb9]/80 text-sm leading-relaxed mb-6 font-light">
                   Premium, hygienically processed, export-grade pantry essentials. Sourced from celebrated agricultural belts of the Indian subcontinent.
                 </p>
-                <div className="flex items-center gap-4 text-[#c3ccb9]/60">
-                  <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="h-8 w-8 rounded-full border border-white/10 flex items-center justify-center hover:text-[#e5ad76] hover:border-[#e5ad76] hover:scale-105 transition-all duration-300">
-                    <Instagram className="h-4 w-4" />
-                  </a>
-                  <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="h-8 w-8 rounded-full border border-white/10 flex items-center justify-center hover:text-[#e5ad76] hover:border-[#e5ad76] hover:scale-105 transition-all duration-300">
-                    <Facebook className="h-4 w-4" />
-                  </a>
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="h-8 w-8 rounded-full border border-white/10 flex items-center justify-center hover:text-[#e5ad76] hover:border-[#e5ad76] hover:scale-105 transition-all duration-300">
-                    <Linkedin className="h-4 w-4" />
-                  </a>
-                </div>
               </div>
 
               {/* Navigate Col */}
@@ -581,6 +592,12 @@ export default function Home() {
                   <li>
                     <Link href="/" className="hover:text-[#e5ad76] transition-colors relative group py-1">
                       Home
+                      <span className="absolute left-0 bottom-0 h-px w-0 bg-[#e5ad76] group-hover:w-full transition-all duration-300" />
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/products" className="hover:text-[#e5ad76] transition-colors relative group py-1">
+                      Products
                       <span className="absolute left-0 bottom-0 h-px w-0 bg-[#e5ad76] group-hover:w-full transition-all duration-300" />
                     </Link>
                   </li>
@@ -607,7 +624,7 @@ export default function Home() {
             <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[10px] text-[#c3ccb9]/50 tracking-[0.05em]">
               <div className="flex flex-col gap-1 md:flex-row md:items-center md:gap-6">
                 <span>© 2026 Diarch Organic. All Rights Reserved.</span>
-                <span>A Division of the Diarch Group · Est. 2016</span>
+                <span>A Division of the Diarch Group · Est. {diarchData.brandInfo.since}</span>
               </div>
               <div className="flex items-center gap-6">
                 <span className="text-[9px] text-[#e5ad76]/50 tracking-[0.2em] uppercase">{diarchData.contact.phone}</span>

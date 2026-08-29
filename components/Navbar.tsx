@@ -28,6 +28,7 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
   // page rendered bright/bold, the rest dimmed.
   const links = [
     { href: "/", label: "Home" },
+    { href: "/products", label: "Products" },
     { href: "/contact", label: "Inquire" },
   ];
   const isActive = (href: string) => href === "/" ? pathname === "/" : pathname.startsWith(href);
