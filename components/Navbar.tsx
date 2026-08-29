@@ -66,7 +66,10 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden transition-colors text-white hover:text-[#e5ad76]"
+          aria-label={isOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
+          className="md:hidden flex h-11 w-11 items-center justify-center transition-colors text-white hover:text-[#e5ad76]"
         >
           {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -75,6 +78,7 @@ export default function Navbar({ transparent = false }: { transparent?: boolean 
       <AnimatePresence>
         {isOpen && (
           <motion.div
+            id="mobile-menu"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}

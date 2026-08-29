@@ -210,7 +210,7 @@ export default function Home() {
                       <IconComponent className="w-6 h-6 text-white" />
                     </div>
                     {/* Title */}
-                    <h4 className="font-serif text-xl text-[#fff4df] mb-3">{item.title}</h4>
+                    <h3 className="font-serif text-xl text-[#fff4df] mb-3">{item.title}</h3>
                     {/* Description */}
                     <p className="text-xs leading-relaxed text-[#c3ccb9] font-light max-w-[15rem]">{item.description}</p>
                     
@@ -427,16 +427,21 @@ export default function Home() {
 
             {/* Dots + inquire */}
             <div className="relative z-10 mt-12 flex flex-col items-center gap-8">
-              <div className="flex items-center gap-2.5">
+              <div className="flex items-center">
                 {products.map((prod, i) => (
                   <button
                     key={prod.id}
                     onClick={() => setActive(i)}
                     aria-label={`Go to ${prod.name}`}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      i === active ? 'w-8 bg-[#e5ad76]' : 'w-2 bg-white/20 hover:bg-white/40'
-                    }`}
-                  />
+                    className="flex h-11 w-6 items-center justify-center"
+                  >
+                    <span
+                      aria-hidden="true"
+                      className={`block h-2 rounded-full transition-all duration-300 ${
+                        i === active ? 'w-8 bg-[#e5ad76]' : 'w-2 bg-white/20 hover:bg-white/40'
+                      }`}
+                    />
+                  </button>
                 ))}
               </div>
               <Link
